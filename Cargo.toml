@@ -9,7 +9,7 @@ homepage= "https://github.com/casbin-rs/sqlx-adapter"
 readme= "README.md"
 
 [dependencies]
-casbin = { git = "https://github.com/simoneromano96/casbin-rs/tree/actix-rt", default-features = false }
+casbin = { git = "https://github.com/simoneromano96/casbin-rs.git", branch = "actix-rt", default-features = false }
 sqlx = { version = "0.5.2", default-features = false, features = [ "macros" ] }
 async-trait = "0.1.50"
 dotenv = { version = "0.15.0", default-features = false }
