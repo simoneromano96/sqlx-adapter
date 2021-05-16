@@ -9,7 +9,7 @@ homepage= "https://github.com/casbin-rs/sqlx-adapter"
 readme= "README.md"
 
 [dependencies]
-casbin = { version = "2.0.6", default-features = false }
+casbin = { git = "https://github.com/simoneromano96/casbin-rs/tree/actix-rt", default-features = false }
 sqlx = { version = "0.5.2", default-features = false, features = [ "macros" ] }
 async-trait = "0.1.50"
 dotenv = { version = "0.15.0", default-features = false }
@@ -32,9 +32,9 @@ runtime-async-std-rustls = ["casbin/runtime-async-std", "sqlx/runtime-async-std-
 # tokio
 runtime-tokio-native-tls = ["casbin/runtime-tokio", "sqlx/runtime-tokio-native-tls"]
 runtime-tokio-rustls = ["casbin/runtime-tokio", "sqlx/runtime-tokio-rustls"]
-# actix (actually based on tokio)
-runtime-actix-native-tls = ["casbin/runtime-tokio", "sqlx/runtime-actix-native-tls"]
-runtime-actix-rustls = ["casbin/runtime-tokio", "sqlx/runtime-actix-rustls"]
+# actix-rt
+runtime-actix-native-tls = ["casbin/runtime-actix", "sqlx/runtime-actix-native-tls"]
+runtime-actix-rustls = ["casbin/runtime-actix", "sqlx/runtime-actix-rustls"]
 
 #offline mode for sqlx
 offline = ["sqlx/offline"]
